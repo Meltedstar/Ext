@@ -1,0 +1,22 @@
+body {
+    background-color: #000000;
+    color: aliceblue;
+}
+
+.xbody {
+    margin: 30px;
+} 
+
+
+.grad {
+    background: linear-gradient(to right, red, blue);
+    background-clip: text;
+    color: transparent;
+    text-align: center; 
+}
+
+
+
+
+
+
