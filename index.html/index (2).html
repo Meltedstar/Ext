@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <link rel="stylesheet" href="Flexbox.css">
+    <style>
+        
+.box {
+    display: flex;     /* Enable Flexbox layout */
+    flex-wrap: wrap;   /* Allow items to wrap to the next line */
+    padding: 20px;       /* Padding around the container */
+    margin: 20px;        /* Margin around the container */
+    justify-content: center;
+    align-items: center;
+}
+
+
+.box1 {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border: 3px solid black;
+    border-image: linear-gradient(to right, #15ff00, #ff32d6) 1;
+    color: #ff32d6;
+    align-content: center;
+    font-size: 14pt;
+    text-align: center;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+.tip {
+    border: 2px solid white;
+    padding: 15px;
+    margin: 10px;
+
+    background-color: #222;
+    border-radius: 9px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 300px;
+
+    left: 20px;
+    bottom: 60px;
+    position: fixed;
+    display: none;
+}
+
+.tip h4 {
+    text-align: center;
+}
+
+.toggle-hints {
+  position: fixed;
+  bottom: 60px;
+  left: 20px;
+
+  padding: 10px 15px;
+  border: none;
+  background: #b13535;
+  color: white;
+
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+    </style>
+</head>
+<body>
+    <h1>Clash Royale Deck: Golem Beatdown</h1>
+    <div class="box">
+        <div id="bd" class="box1">Electro Dragon</div>
+        <div id="bd1" class="box1">Lumberjack</div>
+        <div class="box1">Golem</div>
+        <div class="box1">Minions</div>
+        <div class="box1">Tornado</div>
+        <div class="box1">Elixir Collector</div>
+        <div class="box1">Tornado</div>
+        <div class="box1">Baby Dragon</div>
+    </div>
+
+<center>
+    <button type="button"
+onclick="document.getElementById('bd').style.color='#15ff00',
+document.getElementById('bd1').style.color='#15ff00'">Show Evolutions
+</button>
+
+<button type="button"
+onclick="document.getElementById('bd').style.color='#ff32d6',
+document.getElementById('bd1').style.color='#ff32d6'">Hide Evolutions
+</button>
+</center>
+
+<h1>Golem Lightning Beatdown Deck Guide</h1>
+<h3>Core Cards</h3>
+<p>Golem – Main win condition and tank. <br> 
+Lightning – Heavy spell to remove key defensive troops/buildings. <br>
+Support Units – Baby Dragon, Night Witch, Mega Minion, Electro Dragon, or Bomber. <br>
+Cycle/Defense Cards – Tornado, Barbarian Barrel, Skeletons, etc. (varies by version).
+</p>
+
+<h3>Gameplan Overview</h3>
+<h4>Early Game (Single Elixir)</h4>
+<p>Play slow and defensive. <br>
+Only drop Golem in the back if the opponent overcommits or you gain an elixir lead. <br>
+Focus on positive trades with support cards. <br>
+</p>
+
+<h4>Mid / Double Elixir</h4>
+<p>Your strongest phase. <br>
+Start backline Golem pushes. <br>
+Support with air units (Baby Dragon, Mega Minion) or splash units. <br>
+Use Tornado to group troops together for support damage. <br>
+</p>
+
+<h4>Late Game / Overtime</h4>
+<p>Pressure with stacked supports behind Golem. <br>
+Use Lightning to break defensive structures and eliminate 3–4 elixir troops <br>
+(Musketeer, Wizard, Magic Archer, Inferno Tower). <br>
+</p>
+
+<h3>How to Use Lightning Effectively</h3>
+<p>Aim to hit 3 high-value targets (e.g., building + troop + troop). <br>
+Use Lightning to:
+<ul>
+    <li>Break Inferno Tower / Inferno Dragon.</li>
+    <li>Kill ranged defenders behind a tower.</li>
+    <li>Remove Queen, Magic Archer, Musketeer, Sparky, etc.</li>
+</ul>
+</p>
+
+<h4>Strengths</h4>
+<p>Dominant in double elixir. <br>
+Hard to stop a fully supported Golem push. <br>
+Lightning punishes defensive formations. <br>
+Great versus mid-cost defenders. <br>
+</p>
+
+<h4>Weaknesses</h4>
+<p>Vulnerable in single elixir. <br>
+Fast cycle decks can pressure opposite lane. <br>
+If you mismanage elixir, big pushes fail. <br>
+Tornado/Swarm-heavy defense can slow early pushes. <br>
+</p>
+
+<button class="toggle-hints">Hints</button>
+<div class="tip">
+<h4>Key Tips</h4>
+<p>
+    <ul>
+<li>Never Golem first play unless you know the matchup.</li> <br>
+<li>Always support Golem from a distance; don’t overspam.</li> <br>
+<li>Switch lanes if they invest too much defending one side.</li> <br>
+<li>Use Lightning only when necessary—don’t waste it early.</li> <br>
+<li>Maintain elixir advantage before launching big pushes. </li><br>
+    </ul>
+</p>
+
+<script>
+    const tip = document.querySelector('.tip');
+    const button = document.querySelector('.toggle-hints');
+
+    button.addEventListener('click', () => {
+        if (tip.style.display === 'block') {
+            tip.style.display = 'none';
+            button.textContent = 'Show Hints';
+        } else {
+            tip.style.display = 'block';
+            button.textContent = 'Hide Hints';
+        }
+    });
+</script>
+</div>
+</body>
+</html>

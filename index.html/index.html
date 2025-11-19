@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox2</title>
+    <style>
+        nav {
+      background: #fff;
+      padding: 20px;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li {
+      display: inline;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+        font-weight: bold;
+    }
+
+    .xbody {
+        margin: 30px;
+    }
+                  
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+        <li><a href="bait.html" target="_self">Bait</a></li>
+        <li><a href="beatdown.html" target="_self">Beatdown</a></li>
+        </ul>
+    </nav>
+    <div class="xbody">
+ <form action="/action_page.php" target="_blank" method="post">
+<label for="fname">First name:</label><br>
+<input type="text" id="fname" name="fname" value="" placeholder="Enter First Name" required><br>
+<label for="lname">Last name:</label><br>
+<input type="text" id="lname" name="lname" value=""><br><br>  
+
+
+    <script>
+        document.getElementById('Bait')
+        .addEventListener('click', function() {
+            document.getElementById("pp").textContent = "Yeah"
+        });
+
+        document.getElementById("Beatdown")
+        .addEventListener('click', function() {
+            document.getElementById("pp").textContent = "What about this?"
+        });
+        
+        document.getElementById("Control")
+        .addEventListener('click', function() {
+            document.getElementById("pp").textContent = "Nice"    
+        });
+    </script>
+    
+<p id="pp">Average elixir ≈ 3.0, which means you can cycle back to Goblin Barrel quickly even if it is countered.</p>
+
+</div>
+</body>
+</html>
